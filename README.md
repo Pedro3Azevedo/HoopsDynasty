@@ -1,15 +1,15 @@
-# 🏀 Hoops Dynasty - NBA Manager Simulation Game
+# Hoops Dynasty - NBA Manager Simulation Game
 
 An Android mobile application that puts you in control of an NBA team as a manager. Build your roster, make strategic decisions, compete in a simulated season, and lead your dynasty to championship glory.
 
 **Course**: Mobile Application Development (DAM)  
-**Institution**: Instituto Superior de Engenharia de Lisboa (ISEC)  
+**Institution**: Instituto Superior de Engenharia de Lisboa (ISEL)  
 **Author**: Pedro Azevedo (A47094)  
 **Date**: July 5, 2023
 
 ---
 
-## 📋 Project Overview
+## Project Overview
 
 **Hoops Dynasty** is a realistic NBA Manager simulation game designed for basketball enthusiasts. Players assume the role of an NBA team manager, building and managing their own team through strategic decisions, roster management, and competitive gameplay.
 
@@ -18,7 +18,7 @@ Create an engaging and immersive experience that authentically simulates the rol
 
 ---
 
-## 🎯 Objectives
+## Objectives
 
 1. **Learn Android Development Technologies**
    - Firebase Authentication and Realtime Database
@@ -39,7 +39,7 @@ Create an engaging and immersive experience that authentically simulates the rol
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ### Architectural Pattern: MVVM (Model-View-ViewModel)
 
@@ -97,63 +97,6 @@ Create an engaging and immersive experience that authentically simulates the rol
 
 ---
 
-## 💾 Database Design
-
-### Entity-Relationship Model
-
-```
-┌──────────────────┐
-│    Manager       │
-├──────────────────┤
-│ - managerId      │
-│ - name           │
-│ - email          │
-└────────┬─────────┘
-         │ (1:1)
-         │
-    ┌────▼──────────┐
-    │     Team      │
-    ├───────────────┤
-    │ - teamId      │
-    │ - name        │
-    │ - wins        │
-    │ - losses      │
-    │ - budget      │
-    └────┬──────────┘
-         │ (1:N)
-         │
-    ┌────▼──────────┐
-    │     Player    │
-    ├───────────────┤
-    │ - playerId    │
-    │ - name        │
-    │ - position    │
-    │ - rating      │
-    │ - stats       │
-    │ - cost        │
-    └───────────────┘
-
-
-    ┌──────────────┐
-    │     Game     │
-    ├──────────────┤
-    │ - gameId     │
-    │ - homeTeam   │
-    │ - awayTeam   │
-    │ - result     │
-    │ - date       │
-    └──────────────┘
-
-    ┌──────────────┐
-    │    Season    │
-    ├──────────────┤
-    │ - seasonId   │
-    │ - year       │
-    │ - teams      │
-    │ - games      │
-    └──────────────┘
-```
-
 ### Storage Technology: Room Database + Firebase
 
 **Room Database**
@@ -169,7 +112,7 @@ Create an engaging and immersive experience that authentically simulates the rol
 
 ---
 
-## 🎮 Core Features
+## Core Features
 
 ### 1. User Authentication
 - Email/password registration
@@ -237,7 +180,7 @@ Save to Firebase & Local Database
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 ### Mobile Framework
 - **Android** - Operating system
@@ -257,7 +200,6 @@ Save to Firebase & Local Database
   - Testable components
   - Reactive data binding
 - **Repository Pattern** - Data abstraction layer
-- **Dependency Injection** - Loose coupling
 
 ### Database & Storage
 - **Room** - Android persistence library
@@ -286,42 +228,6 @@ Save to Firebase & Local Database
   - Navigation - Screen routing
   - Lifecycle - Component lifecycle handling
 
----
-
-## 📱 UI Screens & Flow
-
-### Screen Hierarchy
-
-```
-Splash Screen
-    ↓
-┌───────────────────┐
-│  Authentication   │
-├───────────────────┤
-│ Login Page        │
-│ Register Page     │
-└────────┬──────────┘
-         │
-    ┌────▼───────────┐
-    │ Team Selection │
-    └────┬───────────┘
-         │
-    ┌────▼──────────┐
-    │  Main App     │
-    ├───────────────┤
-    │ Home Page     │───┬────────┬────────┬─────────┬──────────┐
-    │ Roster        │   │        │        │         │          │
-    │ Calendar      │   │        │        │         │          │
-    │ Standings     │   │        │        │         │          │
-    │ Marketplace   │   │        │        │         │          │
-    │ Game Sim      │   │        │        │         │          │
-    │ Profile       │   │        │        │         │          │
-    └───────────────┘   │        │        │         │          │
-         ↓              │        │        │         │          │
-    Game Simulation     │        │        │         │          │
-         ↓              │        │        │         │          │
-    Game Results        │        │        │         │          │
-```
 
 ### Key Screens
 
@@ -387,7 +293,7 @@ Splash Screen
 
 ---
 
-## 🎨 Design Process
+## Design Process
 
 ### Phase 1: Concept
 - Brainstorm app idea and name
@@ -414,7 +320,6 @@ Splash Screen
 - Implement all UI screens with Jetpack Compose
 - Integrate Firebase Authentication
 - Implement game simulation engine
-- Add NBA API integration for player data
 
 ### Phase 4: Post-Production (Planned)
 - Performance optimization
@@ -425,7 +330,7 @@ Splash Screen
 
 ---
 
-## 🎯 Game Mechanics
+## Game Mechanics
 
 ### Team Building
 1. **Draft Selection** - Choose your NBA team from 30 options
@@ -445,162 +350,6 @@ Splash Screen
 - **Budget Management** - Manage team salary cap (future enhancement)
 - **Player Trading** - Buy/sell players in marketplace
 
----
-
-## 📊 Data Flow
-
-### User Registration & Login
-```
-User Input
-    ↓
-Validation
-    ↓
-Firebase Authentication
-    ↓
-Create User in Database
-    ↓
-Store User ID Locally
-    ↓
-Navigate to Team Selection
-```
-
-### Team Selection & Initial Setup
-```
-User Selects Team
-    ↓
-Fetch NBA Players via API
-    ↓
-Create Roster with 10 Players
-    ↓
-Save to Room Database
-    ↓
-Sync with Firebase
-    ↓
-Navigate to Home Screen
-```
-
-### Game Simulation
-```
-Fetch Team Rosters
-    ↓
-Determine Matchup
-    ↓
-Simulate Quarter-by-Quarter
-    ├─ Aggregate Player Stats
-    ├─ Apply Position Weights
-    ├─ Calculate Score
-    └─ Update UI in Real-time
-    ↓
-Calculate Final Score
-    ↓
-Update Team Record (Win/Loss)
-    ↓
-Award Virtual Currency
-    ↓
-Update Database & Firebase
-```
-
----
-
-## 💡 Key Implementation Details
-
-### Room Database Setup
-```kotlin
-// Entity classes map to database tables
-@Entity(tableName = "players")
-data class PlayerEntity(
-    @PrimaryKey val playerId: String,
-    val name: String,
-    val position: String,
-    val rating: Int,
-    val stats: String, // JSON-serialized stats
-    val cost: Int
-)
-
-// DAOs define database operations
-@Dao
-interface PlayerDAO {
-    @Query("SELECT * FROM players WHERE teamId = :teamId")
-    fun getTeamPlayers(teamId: String): List<PlayerEntity>
-    
-    @Insert
-    suspend fun insertPlayer(player: PlayerEntity)
-}
-
-// Database class ties it together
-@Database(entities = [PlayerEntity::class, TeamEntity::class], version = 1)
-abstract class HoopsDynastyDatabase : RoomDatabase() {
-    abstract fun playerDao(): PlayerDAO
-    abstract fun teamDao(): TeamDAO
-}
-```
-
-### ViewModel with LiveData
-```kotlin
-class TeamViewModel : ViewModel() {
-    private val _teamLiveData = MutableLiveData<Team>()
-    val teamLiveData: LiveData<Team> = _teamLiveData
-    
-    fun loadTeam(teamId: String) {
-        // Fetch from repository
-        // Update LiveData
-        // UI automatically updates
-    }
-}
-```
-
-### Jetpack Compose UI
-```kotlin
-@Composable
-fun HomeScreen(viewModel: TeamViewModel) {
-    val team by viewModel.teamLiveData.observeAsState()
-    
-    Column {
-        TeamHeader(team)
-        RosterPreview(team.players)
-        NextGameCard(team.nextGame)
-        NavigationButtons()
-    }
-}
-```
-
-### Firebase Integration
-```kotlin
-// Authentication
-FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
-
-// Realtime Database
-FirebaseDatabase.getInstance().reference.child("teams").setValue(teamData)
-
-// Data Serialization
-val json = Gson().toJson(playerStats)
-```
-
----
-
-## 📈 Statistics & Integration
-
-### Player Statistics Considered
-- **Point Guard**: Assists, Steals, 3-Point %
-- **Shooting Guard**: Field Goal %, Points, 3-Point %
-- **Small Forward**: Field Goal %, Rebounds, Points
-- **Power Forward**: Rebounds, Field Goal %, Blocks
-- **Center**: Rebounds, Blocks, Field Goal %, Assists
-
-### NBA API Integration
-- Real NBA player statistics
-- Current season data
-- Player performance metrics
-- Team information
-- Historical statistics
-
-### Stat-Based Simulation
-Position-weighted calculation ensures authentic game simulation:
-```
-Team Score = Σ(Player Rating × Position Relevance × Random Variance)
-```
-
----
 
 ## 🎓 Learning Outcomes
 
@@ -641,57 +390,6 @@ Upon completing this project, the developer demonstrates:
 - Backend integration
 - Data flow management
 
----
-
-## 🚀 Features Implemented
-
-✅ User authentication (registration/login)  
-✅ Team selection from 30 NBA teams  
-✅ Roster management with drag-and-drop  
-✅ Home dashboard with team information  
-✅ Season calendar view  
-✅ Standings display  
-✅ Marketplace browsing (purchase not yet implemented)  
-✅ Game simulation engine  
-✅ Real-time game display  
-✅ Final game results  
-✅ Local database (Room)  
-✅ Cloud synchronization (Firebase)  
-✅ Modern UI with Jetpack Compose  
-
----
-
-## 🔮 Future Enhancements
-
-### Short-term
-- [ ] Complete marketplace purchase functionality
-- [ ] Virtual currency earning after games
-- [ ] Season completion and championship
-- [ ] Improved game simulation accuracy
-- [ ] Box score detailed statistics
-- [ ] Player injury system
-- [ ] Trade functionality
-
-### Medium-term
-- [ ] Player training and skill development
-- [ ] Salary cap management
-- [ ] Draft system for new players
-- [ ] Coach hiring and tactics
-- [ ] Fan engagement and morale system
-- [ ] Achievement badges and statistics tracking
-
-### Long-term
-- [ ] Multiplayer head-to-head matches
-- [ ] Global leaderboards
-- [ ] Cross-device synchronization
-- [ ] Tournaments and championships
-- [ ] In-app purchases for premium currency
-- [ ] Social features (friend lists, messaging)
-- [ ] Real-time multiplayer gameplay
-- [ ] Advanced analytics and coaching tools
-
----
-
 ## 📖 Development Challenges & Solutions
 
 ### Challenge 1: Player Data Management
@@ -716,7 +414,7 @@ Upon completing this project, the developer demonstrates:
 
 ---
 
-## 💻 Development Environment
+##  Development Environment
 
 **IDE**: Android Studio  
 **Language**: Kotlin  
@@ -768,39 +466,21 @@ HoopsDynasty/
 └── build.gradle
 ```
 
----
-
-## 🤝 Contributing
-
-This is an academic project completed as coursework. For questions or improvements, please contact the author.
-
----
-
 ## 📄 License
 
-Educational use only. Project completed as coursework for Mobile Application Development (DAM) at ISEC.
+Educational use only. Project completed as coursework for Mobile Application Development (DAM) at ISEL.
 
 ---
 
 ## 👤 Author
 
 **Pedro Azevedo** (A47094)  
-**Licenciatura em Engenharia Informática e Multimédia**  
-**Instituto Superior de Engenharia de Lisboa (ISEC)**  
+**Licenciatura em Engenharia Informática e Multimedia**  
+**Instituto Superior de Engenharia de Lisboa (ISEL)**  
 **Course**: Mobile Application Development (DAM)  
 **Instructor**: Engenheiro Pedro Fazenda  
 **Date Completed**: July 5, 2023
 
----
-
-## 🏀 Project Links
-
-- **Course**: Mobile Application Development (DAM)
-- **Institution**: Instituto Superior de Engenharia de Lisboa
-- **GitHub**: [Your Repository Link]
-- **APK Download**: [Future]
-
----
 
 ## 📚 Technologies & Frameworks
 
@@ -816,28 +496,12 @@ Educational use only. Project completed as coursework for Mobile Application Dev
 | IDE | Android Studio |
 | API | NBA API |
 
----
 
-## 📈 Development Phases
-
-| Phase | Duration | Focus |
-|---|---|---|
-| Concept | Week 1 | Ideation, wireframes, design |
-| Pre-Production | Week 2-3 | Mockups, database design, planning |
-| Production | Week 4-8 | Implementation, coding, testing |
-| Post-Production | Ongoing | Polish, optimization, enhancements |
-
----
-
-## 🎯 Conclusion
+##  Conclusion
 
 Hoops Dynasty demonstrates the complete mobile application development process from concept through production. By combining UX design principles with modern Android technologies, this project delivers an engaging NBA Manager simulation game that authentically captures the experience of leading a professional basketball team.
 
 The project successfully implements MVVM architecture, local and cloud database storage, real-time game simulation, and an intuitive user interface using Jetpack Compose. While some features remain to be implemented (marketplace purchases, earnings system, season completion), the foundation is solid and extensible for future development.
 
 ---
-
-**Last Updated**: January 29, 2026  
-**Project Status**: Core Features Complete  
-**Next Steps**: Feature completion and Play Store release
 
