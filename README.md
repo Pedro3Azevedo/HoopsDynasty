@@ -351,7 +351,7 @@ Save to Firebase & Local Database
 - **Player Trading** - Buy/sell players in marketplace
 
 
-## 🎓 Learning Outcomes
+## Learning Outcomes
 
 Upon completing this project, the developer demonstrates:
 
@@ -390,7 +390,7 @@ Upon completing this project, the developer demonstrates:
 - Backend integration
 - Data flow management
 
-## 📖 Development Challenges & Solutions
+## Development Challenges & Solutions
 
 ### Challenge 1: Player Data Management
 **Problem**: Sourcing and organizing comprehensive NBA player statistics  
@@ -414,7 +414,7 @@ Upon completing this project, the developer demonstrates:
 
 ---
 
-##  Development Environment
+## Development Environment
 
 **IDE**: Android Studio  
 **Language**: Kotlin  
@@ -425,7 +425,7 @@ Upon completing this project, the developer demonstrates:
 
 ---
 
-## 📋 Project Structure
+## Project Structure
 
 ```
 HoopsDynasty/
@@ -472,7 +472,7 @@ Educational use only. Project completed as coursework for Mobile Application Dev
 
 ---
 
-## 👤 Author
+##  Author
 
 **Pedro Azevedo** (A47094)  
 **Licenciatura em Engenharia Informática e Multimedia**  
@@ -482,7 +482,7 @@ Educational use only. Project completed as coursework for Mobile Application Dev
 **Date Completed**: July 5, 2023
 
 
-## 📚 Technologies & Frameworks
+## Technologies & Frameworks
 
 | Category | Technology |
 |---|---|
